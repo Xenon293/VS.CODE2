@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,6 +17,7 @@
             overflow: hidden;
             position: relative;
             padding: 20px;
+            transition: background-color 0.3s ease;
         }
 
         .container {
@@ -31,12 +31,14 @@
             box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
             position: relative;
             z-index: 2;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
         }
 
         h1 {
             color: #9b59b6;
             font-size: 28px;
             margin-bottom: 20px;
+            transition: color 0.3s ease;
         }
 
         p {
@@ -44,6 +46,7 @@
             font-size: 16px;
             line-height: 1.6;
             margin-bottom: 20px;
+            transition: color 0.3s ease;
         }
 
         img {
@@ -93,6 +96,7 @@
             font-style: italic;
             color: #8e44ad;
             margin-top: 20px;
+            transition: color 0.3s ease;
         }
 
         .contact-form {
@@ -102,6 +106,7 @@
             border: 1px solid #ddd;
             border-radius: 10px;
             background-color: #fff;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
         }
 
         .contact-form input,
@@ -111,6 +116,7 @@
             margin-bottom: 10px;
             border: 1px solid #ddd;
             border-radius: 5px;
+            transition: border-color 0.3s ease;
         }
 
         .contact-form button {
@@ -125,18 +131,6 @@
 
         .contact-form button:hover {
             background-color: #8e44ad;
-        }
-
-        .countdown {
-            font-size: 20px;
-            margin-top: 20px;
-            color: #9b59b6;
-        }
-
-        .weather-widget {
-            margin-top: 20px;
-            font-size: 16px;
-            color: #333;
         }
 
         .lightbox {
@@ -203,6 +197,31 @@
             background-color: #8e44ad;
         }
 
+        .dark-mode-active {
+            background-color: #333;
+        }
+
+        .dark-mode-active .container {
+            background-color: rgba(50, 50, 50, 0.9);
+            border-color: #8e44ad;
+        }
+
+        .dark-mode-active h1,
+        .dark-mode-active p,
+        .dark-mode-active .quote {
+            color: #fff;
+        }
+
+        .dark-mode-active .contact-form {
+            background-color: #444;
+            border-color: #555;
+        }
+
+        .dark-mode-active .contact-form input,
+        .dark-mode-active .contact-form textarea {
+            border-color: #666;
+        }
+
         @media (max-width: 600px) {
             body {
                 padding: 10px;
@@ -224,11 +243,7 @@
                 font-size: 14px;
             }
 
-            .countdown {
-                font-size: 18px;
-            }
-
-            .weather-widget {
+            .quote {
                 font-size: 14px;
             }
         }
@@ -314,304 +329,3 @@
     </script>
 </body>
 </html>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For My Bestfriend</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            overflow: hidden;
-        }
-        body {
-            font-family: 'Roboto', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f4f4f4;
-            padding: 20px;
-        }
-        .container {
-            text-align: center;
-            width: 100%;
-            max-width: 800px; /* Increased maximum width for better display on large screens */
-            padding: 20px;
-            border: 2px solid #9b59b6;
-            border-radius: 15px;
-            background-color: rgba(255, 240, 245, 0.9);
-            box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
-            position: relative;
-            z-index: 2;
-            overflow: hidden; /* Ensure content does not overflow */
-        }
-        h1 {
-            color: #9b59b6;
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-        p {
-            color: #333;
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        img {
-            max-width: 100%;
-            border-radius: 15px;
-            border: 5px solid #9b59b6;
-            margin: 20px 0;
-            cursor: pointer;
-            transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
-        }
-        img:hover {
-            transform: scale(1.05);
-            filter: brightness(1.2);
-        }
-        button {
-            background-color: #9b59b6;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-        button:hover {
-            background-color: #8e44ad;
-            transform: scale(1.05);
-        }
-        .volume-control {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 20px;
-        }
-        .volume-control input {
-            width: 100px;
-        }
-        .quote {
-            font-style: italic;
-            color: #8e44ad;
-            margin-top: 20px;
-        }
-        .contact-form {
-            max-width: 100%;
-            margin: 20px auto;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            background-color: #fff;
-        }
-        .contact-form input,
-        .contact-form textarea {
-            width: calc(100% - 22px); /* Adjust width for padding and border */
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        .contact-form button {
-            width: 100%;
-            padding: 10px;
-            background-color: #9b59b6;
-            border: none;
-            border-radius: 5px;
-            color: #fff;
-            font-size: 16px;
-        }
-        .contact-form button:hover {
-            background-color: #8e44ad;
-        }
-        .countdown {
-            font-size: 20px;
-            margin-top: 20px;
-            color: #9b59b6;
-        }
-        .weather-widget {
-            margin-top: 20px;
-            font-size: 16px;
-            color: #333;
-        }
-        .lightbox {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            z-index: 999;
-            justify-content: center;
-            align-items: center;
-        }
-        .lightbox img {
-            max-width: 90%;
-            max-height: 90%;
-            border: none;
-        }
-        .lightbox .close {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 30px;
-            color: #fff;
-            cursor: pointer;
-        }
-        .return-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #9b59b6;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 50%;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        .return-to-top:hover {
-            background-color: #8e44ad;
-            transform: scale(1.1);
-        }
-        .dark-mode {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: #9b59b6;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .dark-mode:hover {
-            background-color: #8e44ad;
-        }
-        @media (max-width: 600px) {
-            body {
-                padding: 10px;
-            }
-            h1 {
-                font-size: 24px;
-            }
-            p {
-                font-size: 14px;
-            }
-            .volume-control input {
-                width: 80px;
-            }
-            .contact-form button {
-                font-size: 14px;
-            }
-            .countdown {
-                font-size: 18px;
-            }
-            .weather-widget {
-                font-size: 14px;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <div class="overlay"></div>
-
-    <div class="loader" id="loader"></div>
-
-    <div class="container">
-        <h1 id="greeting">Hello, Myles!</h1>
-        <p>"hi dae I just want to say I REALLY REALLY MISSYOU,THANKYOU FOR THE MEMORIES WE CREATE even sometimes we can't understand each other but our friendship Strong like us I HOPE YOU CAN ACHIEVE YOUR GOAL IN THE FUTURE CAUSE I KNOW U CAN DO IT!ILYSM ALWAYS REMEMBER I GOT U ALWAYS LOVEUUU MISSYOUU AND THIS SONG IS RELATED TO OUR FRIENDSHIP CAUSE EVEN WE'RE NOT THE SAME ANYMORE BUT OUR BONDING IS NEVER ENDING. I HOPE I SEEU SOON WHEN WE'RE NOT BUSY LOVEU MISSYOU"</p>
-        <img src="deze and myles.jpg" alt="A picture of Hanna smiling" onclick="showLightbox()">
-
-        <audio id="bgMusic" loop>
-          <source src="Kenny Rogers - Through The Years (Audio).mp3" type="audio/mp3">
-          Your browser does not support the audio element.
-        </audio>
-
-        <div class="volume-control">
-            <i class="volume-icon">🔈</i>
-            <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1" onchange="adjustVolume()" title="Volume Control">
-            <i class="volume-icon">🔊</i>
-        </div>
-
-        <button id="musicButton" onclick="toggleMusic()">Play Music</button>
-        <button class="share-btn" onclick="sharePage()">Share</button>
-
-        <p class="quote">"Our friendship is like a never-ending song, always with me, even when we're apart."</p>
-
-        <div class="contact-form">
-            <h2>Contact Me</h2>
-            <form id="contactForm">
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
-                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-
-        <button class="return-to-top" onclick="scrollToTop()">↑</button>
-    </div>
-
-    <script>
-        const bgMusic = document.getElementById("bgMusic");
-        const musicButton = document.getElementById("musicButton");
-        const volumeControl = document.getElementById("volumeControl");
-        let isMusicPlaying = false;
-
-        function toggleMusic() {
-            if (isMusicPlaying) {
-                bgMusic.pause();
-                musicButton.textContent = "Play Music";
-            } else {
-                bgMusic.play();
-                musicButton.textContent = "Pause Music";
-            }
-            isMusicPlaying = !isMusicPlaying;
-        }
-
-        function adjustVolume() {
-            bgMusic.volume = volumeControl.value;
-        }
-
-        function showLightbox() {
-            const lightbox = document.createElement('div');
-            lightbox.className = 'lightbox';
-            lightbox.innerHTML = `
-                <img src="deze and myles.jpg" alt="Enlarged Image">
-                <div class="close" onclick="closeLightbox()">&times;</div>
-            `;
-            document.body.appendChild(lightbox);
-            lightbox.style.display = 'flex';
-        }
-
-        function closeLightbox() {
-            document.querySelector('.lightbox').remove();
-        }
-
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        function sharePage() {
-            if (navigator.share) {
-                navigator.share({
-                    title: 'For My Bestfriend',
-                    url: window.location.href
-                });
-            } else {
-                alert("Sharing not supported on this browser.");
-            }
-        }
-    </script>
-</body>
-</html>
->>>>>>> cf4c3e3c4be3e7004f58ada9d832cbf940871fd2
