@@ -17,7 +17,6 @@
             overflow: hidden;
             position: relative;
             padding: 20px;
-            transition: background-color 0.3s ease;
         }
 
         .container {
@@ -31,14 +30,12 @@
             box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
             position: relative;
             z-index: 2;
-            transition: background-color 0.3s ease, border-color 0.3s ease;
         }
 
         h1 {
             color: #9b59b6;
             font-size: 28px;
             margin-bottom: 20px;
-            transition: color 0.3s ease;
         }
 
         p {
@@ -46,7 +43,6 @@
             font-size: 16px;
             line-height: 1.6;
             margin-bottom: 20px;
-            transition: color 0.3s ease;
         }
 
         img {
@@ -96,7 +92,6 @@
             font-style: italic;
             color: #8e44ad;
             margin-top: 20px;
-            transition: color 0.3s ease;
         }
 
         .contact-form {
@@ -106,7 +101,6 @@
             border: 1px solid #ddd;
             border-radius: 10px;
             background-color: #fff;
-            transition: background-color 0.3s ease, border-color 0.3s ease;
         }
 
         .contact-form input,
@@ -116,7 +110,6 @@
             margin-bottom: 10px;
             border: 1px solid #ddd;
             border-radius: 5px;
-            transition: border-color 0.3s ease;
         }
 
         .contact-form button {
@@ -131,6 +124,18 @@
 
         .contact-form button:hover {
             background-color: #8e44ad;
+        }
+
+        .countdown {
+            font-size: 20px;
+            margin-top: 20px;
+            color: #9b59b6;
+        }
+
+        .weather-widget {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #333;
         }
 
         .lightbox {
@@ -197,40 +202,9 @@
             background-color: #8e44ad;
         }
 
-        .dark-mode-active {
-            background-color: #333;
-        }
-
-        .dark-mode-active .container {
-            background-color: rgba(50, 50, 50, 0.9);
-            border-color: #8e44ad;
-        }
-
-        .dark-mode-active h1,
-        .dark-mode-active p,
-        .dark-mode-active .quote {
-            color: #fff;
-        }
-
-        .dark-mode-active .contact-form {
-            background-color: #444;
-            border-color: #555;
-        }
-
-        .dark-mode-active .contact-form input,
-        .dark-mode-active .contact-form textarea {
-            border-color: #666;
-        }
-
         @media (max-width: 600px) {
             body {
                 padding: 10px;
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .container {
-                padding: 15px;
             }
 
             h1 {
@@ -249,17 +223,11 @@
                 font-size: 14px;
             }
 
-            .quote {
-                font-size: 14px;
+            .countdown {
+                font-size: 18px;
             }
 
-            .return-to-top {
-                font-size: 20px;
-                padding: 8px 12px;
-            }
-
-            .dark-mode {
-                padding: 8px 15px;
+            .weather-widget {
                 font-size: 14px;
             }
         }
